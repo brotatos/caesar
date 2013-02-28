@@ -54,3 +54,18 @@ char* encrypt(int argc, char *argv[])
 
    return argv[3];
 }
+//const char *foobar = "foobar";
+//const char *p;
+//for (p = foobar; *p != '\0'; ++p)
+//{
+//    printf("Current letter: %c\n", *p);
+//}
+//return 0;
+//}
+
+/*
+ * simplify if statements:
+ * if () {}
+ * else if () {}
+ * else {}
+ */
