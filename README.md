@@ -3,7 +3,7 @@ caesar
 caesar is a simple encrypter or decrypter that shifts your message the
 amount of characters you specify in [shift].
 
-Usage:
+Usage
 ------
     caesar <option> [ shift ] [ "string" ]
     -e, --encrypt
@@ -15,3 +15,7 @@ Usage:
         alphabet.
 
 The string must be enclosed in double quotes.
+
+Author
+------
+Robin Choudhury <rchoudhu@calpoly.edu>
