@@ -21,30 +21,21 @@ char* encrypt(int argc, char *argv[])
 
    for (j = 0; j < strlen(elements); j++)
    {
-      if (isalpha(elements[j]))
+      if (elements[j] >= 'A' && elements[j] <= 'M')
       {
-         if (elements[j] >= 'A' && elements[j] <= 'Z')
-         {
-            if (elements[j] >= 'A' && elements[j] <= 'M')
-            {
-               printf("%c", elements[j] + num_shift);
-            }
-            else
-            {
-               printf("%c", elements[j] - num_shift);
-            }
-         }
-         else
-         {
-            if (elements[j] >= 'a' && elements[j] <= 'm')
-            {
-               printf("%c", elements[j] + num_shift);
-            }
-            else
-            {
-               printf("%c", elements[j] - num_shift);
-            }
-         }
+         printf("%c", elements[j] + num_shift);
+      }
+      else if (elements[j] >= 'N' && elements[j] <= 'Z')
+      {
+         printf("%c", elements[j] - num_shift);
+      }
+      else if (elements[j] >= 'a' && elements[j] <= 'm')
+      {
+         printf("%c", elements[j] + num_shift);
+      }
+      else if (elements[j] >= 'n' && elements[j] <= 'z')
+      {
+         printf("%c", elements[j] - num_shift);
       }
       else
       {
