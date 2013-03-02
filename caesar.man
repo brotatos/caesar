@@ -1,6 +1,6 @@
 .\" Manpage for caesar.
 .\" Contact rchoudhu@calpoly.edu to correct errors or typos.
-.TH CAESAR 1 "03 March 2013" "1.0" "CAESAR 1"
+.TH CAESAR 1 "03 March 2013" "1.0" "Caesar Manual"
 
 .SH NAME
 caesar - a simple caeser cipher
