@@ -3,7 +3,7 @@ CFLAGS=-Wall -std=c99
 
 all: caesar
 
-caeser: cipher.o caesar.o
+caesar: cipher.o caesar.o
 
 clean:
 	$(RM) *.o caesar

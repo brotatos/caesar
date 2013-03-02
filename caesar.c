@@ -19,11 +19,3 @@ int main(int argc, char *argv[])
 
    return 0;
 }
-
-// gcc -Wall -std=c99   -c -o caesar.o caesar.c
-// gcc   caesar.o   -o caesar
-// caesar.o: In function `main':
-// caesar.c:(.text+0x7d): undefined reference to `encrypt'
-// caesar.c:(.text+0xcd): undefined reference to `decrypt'
-// collect2: error: ld returned 1 exit status
-// make: *** [caesar] Error 1

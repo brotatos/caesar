@@ -1,16 +1,16 @@
-.\" Manpage for cipher.
+.\" Manpage for caesar.
 .\" Contact rchoudhu@calpoly.edu to correct errors or typos.
-.TH CIPHER 1 "03 March 2013" "1.0" "COWER 1"
+.TH CAESAR 1 "03 March 2013" "1.0" "CAESAR 1"
 
 .SH NAME
-cipher - a simple caeser cipher
+caesar - a simple caeser cipher
 
 .SH SYNOPSIS
-Usage: cipher <option> [ shift ] [ "string" ]
+Usage: caesar <option> [ shift ] [ "string" ]
     The string must be enclosed in double quotes.
 
 .SH DESCRIPTION
-cipher is a simple encrypter or decrypter that shifts your message the
+caesar is a simple encrypter or decrypter that shifts your message the
 amount of characters you specify in [shift].
 
 .SH OPTIONS
