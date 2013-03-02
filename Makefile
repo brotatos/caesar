@@ -1,11 +1,11 @@
 CC=gcc
 CFLAGS=-Wall -std=c99
 
-all: cipher_test
+all: cipher
 
-cipher_test: cipher_test.o cipher.o
+cipher: cipher.o
 
 clean:
-	$(RM) *.o cipher_test
+	$(RM) *.o cipher
 
 .PHONY: clean all

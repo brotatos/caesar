@@ -1,17 +1,32 @@
-#include "cipher.h"
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdio.h>
 
-char* encrypt(int argc, char *argv[])
+void encrypt();
+void decrypt();
+
+int main(int argc, char *argv[])
+{
+   if (argc < 4)
+   {
+      printf("Usage: cipher [-e or -d] <shift> <\"STRING\">\n");
+      printf("\tThe string must be enclosed in double quotes.\n");
+      exit(0);
+   }
+   else if (strcmp(argv[1],"-d") == 0)
+   {
+      decrypt(argc, argv);
+   }
+   return 0;
+}
+
+void encrypt(int argc, char *argv[])
 {
    int num_shift;
    int j;
    char *elements;
 
-   if (argc < 3)
-   {
-      printf("Usage: cipher [shift] \"STRING\"\n");
-      printf("\tThe final argument must be enclosed in double quotes.\n");
-      exit(0);
-   }
    // make argv[1] 'e' or 'd' for encryption/decryption
    // argv[2] is num shift
    // argv[3] is string
@@ -43,20 +58,8 @@ char* encrypt(int argc, char *argv[])
       }
    }
 
-   return argv[3];
 }
-//const char *foobar = "foobar";
-//const char *p;
-//for (p = foobar; *p != '\0'; ++p)
-//{
-//    printf("Current letter: %c\n", *p);
-//}
-//return 0;
-//}
-
-/*
- * simplify if statements:
- * if () {}
- * else if () {}
- * else {}
- */
+void decrypt()
+{
+   printf("decrypt!");
+}

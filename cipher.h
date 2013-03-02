@@ -6,10 +6,7 @@
 #include <ctype.h>
 #include <stdio.h>
 
-#define UPPER_BOUND 90
-#define LOWER_BOUND 65
-
-char* encrypt();
+void encrypt();
 void decrypt();
 
 #endif
