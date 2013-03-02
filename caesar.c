@@ -16,6 +16,12 @@ int main(int argc, char *argv[])
    {
       decrypt(argc, argv);
    }
+   else
+   {
+      printf("Usage: cipher [-e or -d] <shift> <\"STRING\">\n");
+      printf("\tThe string must be enclosed in double quotes.\n");
+      exit(0);
+   }
 
    return 0;
 }
