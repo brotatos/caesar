@@ -18,4 +18,4 @@ The string must be enclosed in double quotes.
 
 Author
 ------
-Robin Choudhury <rchoudhu@calpoly.edu>
+Robin Choudhury \<rchoudhu@calpoly.edu\>
