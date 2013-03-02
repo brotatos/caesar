@@ -1,11 +1,11 @@
 CC=gcc
 CFLAGS=-Wall -std=c99
 
-all: cipher
+all: caesar
 
-cipher: cipher.o caeser.o
+caeser: cipher.o caesar.o
 
 clean:
-	$(RM) *.o cipher
+	$(RM) *.o caesar
 
 .PHONY: clean all

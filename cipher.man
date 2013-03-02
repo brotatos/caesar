@@ -1,0 +1,30 @@
+.\" Manpage for cipher.
+.\" Contact rchoudhu@calpoly.edu to correct errors or typos.
+.TH CIPHER 1 "03 March 2013" "1.0" "COWER 1"
+
+.SH NAME
+cipher - a simple caeser cipher
+
+.SH SYNOPSIS
+Usage: cipher <option> [ shift ] [ "string" ]
+    The string must be enclosed in double quotes.
+
+.SH DESCRIPTION
+cipher is a simple encrypter or decrypter that shifts your message the
+amount of characters you specify in [shift].
+
+.SH OPTIONS
+-e, --encrypt
+    Encrypt the message by shifting all the characters forward in the
+    alphabet.
+
+-d, --decrypt
+    Dencrypt the message by shifting all the characters backward in the
+    alphabet.
+
+.SH BUGS
+No known bugs. If you find one, please contact the author.
+
+.SH AUTHOR
+Robin Choudhury (rchoudhu@calpoly.edu)
+
