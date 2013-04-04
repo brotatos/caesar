@@ -1,7 +1,7 @@
 caesar
 ======
 caesar is a simple encrypter or decrypter that shifts your message the
-amount of characters you specify in [shift].
+amount of characters you specify in [ shift ].
 
 Usage
 ------
