@@ -2,7 +2,6 @@
 
 int main(int argc, char *argv[])
 {
-   // use a for loop instead?
    if (argc < 4)
    {
       printf("Usage: cipher [-e or -d] <shift> <\"STRING\">\n");
