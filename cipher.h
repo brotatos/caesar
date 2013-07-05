@@ -10,5 +10,6 @@ void encrypt();
 void decrypt();
 void printUsage();
 void checkArgs(int argc, char *argv[]);
+char checkShift(char c, int numShift);
 
 #endif

@@ -26,7 +26,7 @@ void encrypt(int argc, char *argv[]) {
    int j;
    char *elements;
 
-   numShift = atoi(argv[2]);
+   numShift = atoi(argv[2]) % 26;
    elements = argv[3];
 
    for (j = 0; elements[j]; j++) {
@@ -55,7 +55,8 @@ void decrypt(int argc, char *argv[]) {
    int j;
    char *elements;
 
-   numShift = atoi(argv[2]);
+   numShift = atoi(argv[2]) % 26;
+   printf("numShift: %d\n", numShift);
    elements = argv[3];
 
    for (j = 0; elements[j]; j++) {
@@ -63,7 +64,8 @@ void decrypt(int argc, char *argv[]) {
       // alphabet, you can simply add to it. Subtracting the character value
       // from the last half of the alphabet would result in the same shift.
       if (elements[j] >= 'A' && elements[j] <= 'M') {
-         printf("%c", elements[j] - numShift);
+         //printf("%c", elements[j] - numShift);
+         printf("%c", checkShiftDecrypt(elements[j], numShift);
       } else if (elements[j] >= 'N' && elements[j] <= 'Z') {
          printf("%c", elements[j] + numShift);
       // The same method above can be applied in the exact manner for lowercase
@@ -77,3 +79,36 @@ void decrypt(int argc, char *argv[]) {
       }
    }
 }
+
+// At this point, numshift has already been modulo'd with 26 and is now being
+// passed in.
+char checkShiftDecrypt(char c, int numShift) {
+   int wrap;
+   if (c >= 'A' && c <= 'M') {
+       c -= numShift;
+       if (c <= 'A') {
+          wrap = 'Z' % c;
+          return c + wrap;
+       }
+       return c;
+   } else if (c >= 'N' && c <= 'Z') {
+      c += numShift;
+      return c;
+   } else if (c >= 'a' && c <= 'm') {
+      c -= numShift;
+      return c;
+   } else if (c >= 'n' && c <= 'z') {
+      c += numShift;
+      return c;
+   } else {
+      return c;
+   }
+}
+
+
+// Fix Wrap around error:
+// so you normalize them first (the letter values are shifted by a certain
+// number)
+// then use module to have wraparound
+// then add the offset you've removed
+// it's quite simple once you visualize it on paper

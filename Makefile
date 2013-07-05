@@ -15,7 +15,8 @@ DISTFILES = Makefile  README.md  caesar.c  caesar.man  cipher.c  cipher.h
 MANPAGES = \
 	   caesar.1 \
 
-all: $(OUT) docs
+#all: $(OUT) docs
+all: $(OUT)
 
 docs: $(MANPAGES)
 caesar.1: caesar.man
@@ -27,6 +28,6 @@ caesar.1: caesar.man
 caesar: cipher.o caesar.o
 
 clean:
-	$(RM) $(OUT) $(OBJ) $(MANPAGES)
+	$(RM) $(OUT) $(OBJ) $(MANPAGES) *.gz
 
 .PHONY: clean all
