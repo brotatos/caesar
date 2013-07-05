@@ -1,7 +1,24 @@
 #include "cipher.h"
 
 //printUsage
+void printUsage() {
+      printf("Usage: cipher [-e or -d] <shift> <\"STRING\">\n");
+      printf("\tThe string must be enclosed in double quotes.\n");
+}
 //checkArgs
+void checkArgs(int argc, char *argv[]) {
+   if (argc < 4) {
+      printUsage();
+      exit(0);
+   } else if (strcmp(argv[1],"-e") == 0 || strcmp(argv[1],"--encrypt") == 0) {
+      encrypt(argc, argv);
+   } else if (strcmp(argv[1],"-d") == 0 || strcmp(argv[1],"--decrypt") == 0) {
+      decrypt(argc, argv);
+   } else {
+      printUsage();
+      exit(0);
+   }
+}
 
 // encrypt() shifts the characters forward by the amount specified by numShift
 void encrypt(int argc, char *argv[]) {
@@ -12,7 +29,7 @@ void encrypt(int argc, char *argv[]) {
    numShift = atoi(argv[2]);
    elements = argv[3];
 
-   for (j = 0; j < strlen(elements); j++) {
+   for (j = 0; elements[j]; j++) {
       // If the character is uppercase and within the first half of the
       // alphabet, you can simply add to it. Subtracting the character value
       // from the last half of the alphabet would result in the same shift.
@@ -41,7 +58,7 @@ void decrypt(int argc, char *argv[]) {
    numShift = atoi(argv[2]);
    elements = argv[3];
 
-   for (j = 0; j < strlen(elements); j++) {
+   for (j = 0; elements[j]; j++) {
       // If the character is uppercase and within the first half of the
       // alphabet, you can simply add to it. Subtracting the character value
       // from the last half of the alphabet would result in the same shift.

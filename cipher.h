@@ -8,5 +8,7 @@
 
 void encrypt();
 void decrypt();
+void printUsage();
+void checkArgs(int argc, char *argv[]);
 
 #endif
